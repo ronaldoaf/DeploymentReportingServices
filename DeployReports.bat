@@ -27,8 +27,8 @@ SET DATETIME=%datetime:~0,12%
 7za.exe x %PACK_FULLPATH% -aoa -o%PACK_DIR%
 echo --
 
-IF %USE_PASSWORD%==0 %RS_UTILITY_PATH% -i DeployReports.rss -s http://%SERVER%/Reportserver -v BACKUP_DIR=%BACKUP_DIR%\%DATETIME%_%PACK_NAME% -v DEPLOY_DIR=%DEPLOY_DIR%
-IF %USE_PASSWORD%==1 %RS_UTILITY_PATH% -i DeployReports.rss -s http://%SERVER%/Reportserver -v BACKUP_DIR=%BACKUP_DIR%\%DATETIME%_%PACK_NAME% -v DEPLOY_DIR=%DEPLOY_DIR% -u %USER% -p %PASS%
+IF %USE_PASSWORD%==0 %RS_UTILITY_PATH% -i DeployReports.vb -s http://%SERVER%/Reportserver -v BACKUP_DIR=%BACKUP_DIR%\%DATETIME%_%PACK_NAME% -v DEPLOY_DIR=%DEPLOY_DIR%
+IF %USE_PASSWORD%==1 %RS_UTILITY_PATH% -i DeployReports.vb -s http://%SERVER%/Reportserver -v BACKUP_DIR=%BACKUP_DIR%\%DATETIME%_%PACK_NAME% -v DEPLOY_DIR=%DEPLOY_DIR% -u %USER% -p %PASS%
 
 
 ::Empty the directory , removing and re-creating
